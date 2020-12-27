@@ -32,12 +32,8 @@ GeoIP2 数据库的大小仅为 111 KB，对比原来庞大的 4 MB 数据库，
 ### 📥 下载链接
 | 📦 项目 | 📃 文件 | 🐙 GitHub RAW |  🔧 适用范围
 |  :--:  |  :--:  |     :--:   | ---- |
-| IP-CIDR 列表 | CN-ip-cidr.txt | [点我下载](https://github.com/Hackl0us/GeoIP2-CN/raw/release/CN-ip-cidr.txt) | [点我起飞](https://cdn.jsdelivr.net/gh/Hackl0us/GeoIP2-CN@release/CN-ip-cidr.txt) | 防火墙、较老的代理工具等 | 
-| GeoIP2 数据库 | Country.mmdb | [点我下载](https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb) | [点我起飞](https://cdn.jsdelivr.net/gh/Hackl0us/GeoIP2-CN@release/Country.mmdb) | Surge, Shadowrocket,<br>QuantumultX, Clash<br>等较新的代理工具|
-
-对于网络状况良好、无污染的环境下，建议选择 GitHub RAW 的方式下载，因为可以第一获取到最新的资源，因为服务器在境外，可能下载响应时间和速度稍长，但因为文件小，所以通常问题不大。
-
-对于网络状况不好，存在污染的环境下，建议选择 CDN 加速的方式下载，速度非常快。但是可能存在缓存未更新的情况，很可能下载到旧的资源。
+| IP-CIDR 列表 | CN-ip-cidr.txt | [点我下载](https://github.com/Hackl0us/GeoIP2-CN/raw/release/CN-ip-cidr.txt) | 防火墙、较老的代理工具等 | 
+| GeoIP2 数据库 | Country.mmdb | [点我下载](https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb) | Surge, Shadowrocket,<br>QuantumultX, Clash<br>等较新的代理工具|
 
 ### 🙋🏻‍♂️ 使用方式
 
