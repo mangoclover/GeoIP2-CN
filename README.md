@@ -30,8 +30,8 @@ GeoIP2 数据库的大小仅为 111 KB，对比原来庞大的 4 MB 数据库，
 项目每隔 3 天通过全自动化部署自我更新，时刻保持最佳体验。
 
 ### 📥 下载链接
-| 📦 项目 | 📃 文件 | 🐙 GitHub RAW | 🚀 CDN 加速 | 🔧 适用范围
-|  :--:  |  :--:  |     :--:     |     :--:    | ---- |
+| 📦 项目 | 📃 文件 | 🐙 GitHub RAW |  🔧 适用范围
+|  :--:  |  :--:  |     :--:   | ---- |
 | IP-CIDR 列表 | CN-ip-cidr.txt | [点我下载](https://github.com/Hackl0us/GeoIP2-CN/raw/release/CN-ip-cidr.txt) | [点我起飞](https://cdn.jsdelivr.net/gh/Hackl0us/GeoIP2-CN@release/CN-ip-cidr.txt) | 防火墙、较老的代理工具等 | 
 | GeoIP2 数据库 | Country.mmdb | [点我下载](https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb) | [点我起飞](https://cdn.jsdelivr.net/gh/Hackl0us/GeoIP2-CN@release/Country.mmdb) | Surge, Shadowrocket,<br>QuantumultX, Clash<br>等较新的代理工具|
 
