@@ -1,4 +1,4 @@
-# 本项目最早是 Fork [Hackl0us/GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN)定制修改而来。
+# 本项目最早是 Fork [Hackl0us/GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 定制修改而来。
 
 ![](https://i.loli.net/2020/12/10/BW8HVtKTbISrPYv.png)
 
