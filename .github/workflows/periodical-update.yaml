@@ -51,7 +51,7 @@ jobs:
       run: |
         CURRENT_DIR=$(pwd)
         cd dist
-        ./ipip2mmdb -s ./Surge-Domain-set.txt -d Country.mmdb
+        ./ipip2mmdb -s ./CN-ip-cidr.txt -d Country.mmdb
         cd $CURRENT_DIR
 
     - name: Push artifacts to release branch
