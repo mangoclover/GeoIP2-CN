@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
   schedule: 
-    - cron:  '0 0 * * *'
+    - cron:  '0 */6 * * *'
 
 jobs:
   build:
@@ -56,7 +56,7 @@ jobs:
 
     - name: Push artifacts to release branch
       run: |
-        git config --local user.email "10215166+Hackl0us@users.noreply.github.com"
+        git config --local user.email "48041092+mangoclover@users.noreply.github.com"
         git config --local user.name "github-action[bot]"
 
         git fetch
@@ -81,3 +81,8 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: release
         force: true
+
+    - name: Purge CDN Cache
+      run: |
+        curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/CN-ip-cidr.txt > /dev/null 2>&1
+        curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Country.mmdb > /dev/null 2>&1
