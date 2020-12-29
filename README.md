@@ -24,7 +24,7 @@
 ⚠️ 注意：任何代理工具在使用本项目提供的数据库前，请务必确保以下 3 点（请根据工具语法调整规则）：
 * 禁用与 中国大陆 IP 地址段 直连策略 相关的规则或规则集
     ``` bash
-    RULE-SET, https://handsome.hackl0us.com/China-IP.list, DIRECT # 务必禁用或删除
+    RULE-SET, https://raw.githubusercontent.com/mangoclover/ios_rule_script/master/rule/Surge/ChinaIPs/ChinaIPs.list, DIRECT # 务必禁用或删除
     GEOIP, CN, DIRECT # 与上一条类似的规则与本条规则不可共存
     ```
 
