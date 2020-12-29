@@ -1,4 +1,7 @@
-# 本项目最早是 Fork [Hackl0us/GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 定制修改而来。
+# ⚠️ 注意
+
+本项目旨在优化 CDN 网络访问速度，请勿用于非法用途！
+本项目最早是 Fork [Hackl0us/GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 定制修改而来。
 
 # GeoIP2 · CN
 🇨🇳 最小巧、最准确、最实用的 中国大陆 IP 段 + GeoIP2 数据库 🇨🇳
