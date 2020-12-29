@@ -39,13 +39,16 @@ jobs:
 
     - name: Obtain CN IP lists
       run: |
-        curl -LR -o dist/ipip_net.txt "https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt"
-        curl -LR -o dist/chunzhen.txt "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/CN.txt"
-
+        curl -LR -o- "https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt" | grep -v "#" > dist/ipip-net-CN-ip-cidr.txt
+        curl -LR -o- "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/CN.txt" | grep -v "#" > dist/chunzhen-CN-ip-cidr.txt
+        curl -LR -o- "https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt" | grep -v "#" | sed "s/^\(.*\)$/IP-CIDR,\1/g" > dist/ipip-net-surge-ruleset.list
+        curl -LR -o- "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/CN.txt" | grep -v "#" | sed "s/^\(.*\)$/IP-CIDR,\1/g" > dist/chunzhen-surge-ruleset.list
     - name: Merge and IP lists and remove duplicates
       run: |
         awk 'FNR==1{print ""}{print}' dist/*.txt > dist/merge.txt
         awk '!seen[$0]++' dist/merge.txt > dist/CN-ip-cidr.txt
+        awk 'FNR==1{print ""}{print}' dist/*.list > dist/merge.list
+        awk '!seen[$0]++' dist/merge.list > dist/surge-ruleset.list
 
     - name: Generate GeoIP2 database
       run: |
@@ -67,9 +70,11 @@ jobs:
 
         cp -rf dist/CN-ip-cidr.txt ./
         cp -rf dist/Country.mmdb ./
+        cp -rf dist/surge-ruleset.list ./
 
         git add Country.mmdb
         git add CN-ip-cidr.txt
+        git add surge-ruleset.list
         git commit -am "Updated at $(date)"
 
         git branch -D release
@@ -86,3 +91,4 @@ jobs:
       run: |
         curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/CN-ip-cidr.txt > /dev/null 2>&1
         curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Country.mmdb > /dev/null 2>&1
+        curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/surge-ruleset.list > /dev/null 2>&1
