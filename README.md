@@ -58,6 +58,8 @@
 
 打开 App > Home 页面拉至最下 > More Settings > GeoIP Database > 在 CUSTOM GEOIP DATABASE URL 处粘贴上方复制的 `Country.mmdb` 下载链接，点击 Update Now 即可。
 
+`4.10.0 (1853) [TestFlight]`开始支持自动GeoIP数据库更新，更新频率为每周一次。
+
 #### ShadowRocket 和 Quantumult X
 直接在 Safari 中打开 `Country.mmdb` 下载链接，Safari 下载完毕后页面下方会提示 “在...中打开”，点击完成导入。
 
