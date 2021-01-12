@@ -63,7 +63,7 @@
 
 # 🏅 版权声明
 
-项目`（CN-ip-cidr.txt和Country.mmdb）`中所使用的 IP 地址信息来自于 [17mon/china_ip_list](https://github.com/17mon/china_ip_list)（基于 ipip.net）和 [metowolf/iplist](https://github.com/metowolf/iplist) （基于 纯真 IP）；  
+项目`（CN-ip-cidr.txt 和 Country.mmdb）`中所使用的 IP 地址信息来自于 [17mon/china_ip_list](https://github.com/17mon/china_ip_list)（基于 ipip.net）和 [metowolf/iplist](https://github.com/metowolf/iplist) （基于 纯真 IP）；  
 项目`（Surge-Ruleset.list）`中所使用的 IP 地址信息来自于[misakaio/chnroutes2](https://github.com/misakaio/chnroutes2)。
 
 GeoIP® 商标版权归 [MaxMind](https://www.maxmind.com/) 公司所有。
