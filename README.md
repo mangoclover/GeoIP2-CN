@@ -5,14 +5,10 @@
 本项目最早是 Fork [Hackl0us/GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN) 定制修改而来。
 
 # GeoIP2 · CN
-最小巧、最准确、最实用的 **中国大陆 IP 段 + GeoIP2 数据库**
 
-## 🥳 项目介绍
-1⃣️ 项目选取更新较为频繁、广受好评、准确度高的 **ipip.net** 和 **纯真** IP 数据库的中国大陆 IP 地址段信息进行合并、去重、整理操作，最终生成仅含有中国大陆 IP 信息的 GeoIP2 数据库。准确度高、用户使用体验好。
+本项目使用 GitHub Actions 每周一、三、五早上 6:30 自动更新。
 
-2⃣️ 使用 GitHub Actions 每天早上 6:30 自动更新，保证最新性。
-
-### 📥 下载链接
+## 📥 下载链接
 | 📦 项目 | 📃 文件 | :octocat: GitHub RAW |  🚀 CDN 加速 | 🔧 适用范围
 |  :--:  |  :--:  |     :--:     |     :--:    | ---- |
 | IP-CIDR 列表 | CN-ip-cidr.txt | [点我下载](https://raw.githubusercontent.com/mangoclover/GeoIP2-CN/release/CN-ip-cidr.txt) |  [点我起飞](https://cdn.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/CN-ip-cidr.txt) | iptables, ipset, squid, gost, 3proxy, etc.  | 
@@ -20,7 +16,8 @@
 | Surge规则集 | Surge-Ruleset.list | [点我下载](https://raw.githubusercontent.com/mangoclover/GeoIP2-CN/release/Surge-Ruleset.list) | [点我起飞](https://cdn.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Surge-Ruleset.list) | Surge |
 
 > 如果无法访问**GitHub Raw**域名 `raw.githubusercontent.com`，可以使用**CDN加速地址**（`cdn.jsdelivr.net`），**而且内容更新0延迟**。
-### 🙋🏻‍♂️ 使用方式（以GeoIP2 数据库为例)
+
+## 🙋🏻‍♂️ 使用方式（以GeoIP2 数据库为例)
 
 ⚠️ 注意：任何代理工具在使用本项目提供的数据库前，请务必确保以下 3 点（请根据工具语法调整规则）：
 * 禁用与 中国大陆 IP 地址段 直连策略 相关的规则或规则集
@@ -44,7 +41,7 @@
     GEOIP, CN, DIRECT # 正确
     ```
 
-#### Surge 
+### Surge 
 
 **Surge for macOS**
 
@@ -64,7 +61,7 @@
 直接在 Safari 中打开 `Country.mmdb` 下载链接，Safari 下载完毕后页面下方会提示 “在...中打开”，点击完成导入。
 
 
-## 🏅 版权声明
+# 🏅 版权声明
 
 项目中所使用的 IP 地址信息来自于 [17mon/china_ip_list](https://github.com/17mon/china_ip_list)（基于 ipip.net）和 [metowolf/iplist](https://github.com/metowolf/iplist) （基于 纯真 IP）以及引用了部分[misakaio/chnroutes2](https://github.com/misakaio/chnroutes2)的数据。
 
