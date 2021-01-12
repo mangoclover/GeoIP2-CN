@@ -2,12 +2,15 @@ name: Update China IP list and generate GeoIP2 database
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+    paths-ignore:
+      - "**/README.md"
   
   workflow_dispatch:
 
   schedule: 
-    - cron:  '30 22 * * *'
+    - cron:  '30 22 * * 1,3,5'
 
 jobs:
   build:
