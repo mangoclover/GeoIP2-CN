@@ -6,7 +6,7 @@
 
 # GeoIP2 · CN
 
-**本项目使用 GitHub Actions 每两天自动更新一次。**
+**本项目使用 GitHub Actions 每周五自动更新。**
 
 ## 📥 下载链接
 | 📦 项目 | 📃 文件 | :octocat: GitHub RAW |  🚀 CDN 加速 | 🔧 适用范围
