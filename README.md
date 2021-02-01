@@ -13,6 +13,7 @@
 |  :--:  |  :--:  |     :--:     |     :--:    | ---- |
 | IP-CIDR 列表 | CN-ip-cidr.txt | [点我下载](https://raw.githubusercontent.com/mangoclover/GeoIP2-CN/release/CN-ip-cidr.txt) |  [点我起飞](https://cdn.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/CN-ip-cidr.txt) | iptables, ipset, squid, gost, 3proxy, etc.  | 
 | GeoIP2 数据库 | Country.mmdb | [点我下载](https://github.com/mangoclover/GeoIP2-CN/raw/release/Country.mmdb) |  [点我起飞](https://cdn.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Country.mmdb) | Surge, Shadowrocket,<br>QuantumultX, Clash<br>等较新的代理工具|
+| GeoIP2 数据库 | chnroutes.mmdb | [点我下载](https://github.com/mangoclover/GeoIP2-CN/raw/release/chnroutes.mmdb) |  [点我起飞](https://cdn.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/chnroutes.mmdb) | Surge, Shadowrocket,<br>QuantumultX, Clash<br>等较新的代理工具|
 | Surge规则集 | Surge-Ruleset.list | [点我下载](https://raw.githubusercontent.com/mangoclover/GeoIP2-CN/release/Surge-Ruleset.list) | [点我起飞](https://cdn.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Surge-Ruleset.list) | Surge |
 
 > 如果无法访问**GitHub Raw**域名 `raw.githubusercontent.com`，可以使用**CDN加速地址**（`cdn.jsdelivr.net`），**而且内容更新0延迟**。
