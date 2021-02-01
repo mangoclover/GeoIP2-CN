@@ -45,6 +45,7 @@ jobs:
         curl -LR -o- "https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt" | grep -v "#" > dist/ipip_net.txt
         curl -LR -o- "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/CN.txt" | grep -v "#" > dist/chunzhen.txt
         curl -LR -o- "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt" | grep -v "#" | sed "s/^\(.*\)$/IP-CIDR,\1/g" > dist/Surge-Ruleset.list
+        curl -LR -o- "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt" | grep -v "#" > dist/chnroutes.txt
         
     - name: Merge and IP lists and remove duplicates
       run: |
@@ -57,6 +58,7 @@ jobs:
         CURRENT_DIR=$(pwd)
         cd dist
         ./ipip2mmdb -s ./CN-ip-cidr.txt -d Country.mmdb
+        ./ipip2mmdb -s ./chnroutes.txt -d chnroutes.mmdb
         cd $CURRENT_DIR
 
     - name: Push artifacts to release branch
@@ -73,8 +75,10 @@ jobs:
         cp -rf dist/CN-ip-cidr.txt ./
         cp -rf dist/Country.mmdb ./
         cp -rf dist/Surge-Ruleset.list ./
+        cp -rf dist/chnroutes.mmdb ./
 
         git add Country.mmdb
+        git add chnroutes.mmdb
         git add CN-ip-cidr.txt
         git add Surge-Ruleset.list
         git commit -am "Updated at $(date)"
@@ -94,3 +98,4 @@ jobs:
         curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/CN-ip-cidr.txt > /dev/null 2>&1
         curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Country.mmdb > /dev/null 2>&1
         curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Surge-Ruleset.list > /dev/null 2>&1
+        curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/chnroutes.mmdb > /dev/null 2>&1
