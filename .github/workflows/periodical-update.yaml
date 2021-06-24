@@ -46,6 +46,7 @@ jobs:
         curl -LR -o- "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/CN.txt" | grep -v "#" > dist/chunzhen.txt
         curl -LR -o- "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt" | grep -v "#" | sed "s/^\(.*\)$/IP-CIDR,\1/g" > dist/Surge-Ruleset.list
         curl -LR -o- "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt" | grep -v "#" > dist/chnroutes.txt
+        curl -LR -o- "https://raw.githubusercontent.com/mangoclover/Self_Config_Public/master/Surge4/Ruleset/cnip.txt" | grep -v "#" > dist/chnip.list
         
     - name: Merge and IP lists and remove duplicates
       run: |
@@ -59,6 +60,7 @@ jobs:
         cd dist
         ./ipip2mmdb -s ./CN-ip-cidr.txt -d Country.mmdb
         ./ipip2mmdb -s ./chnroutes.txt -d chnroutes.mmdb
+        ./ipip2mmdb -s ./chnip.list -d chnip.mmdb
         cd $CURRENT_DIR
 
     - name: Push artifacts to release branch
@@ -76,11 +78,13 @@ jobs:
         cp -rf dist/Country.mmdb ./
         cp -rf dist/Surge-Ruleset.list ./
         cp -rf dist/chnroutes.mmdb ./
+        cp -rf dist/chnip.mmdb ./
 
         git add Country.mmdb
         git add chnroutes.mmdb
         git add CN-ip-cidr.txt
         git add Surge-Ruleset.list
+        git add chnip.mmdb
         git commit -am "Updated at $(date)"
 
         git branch -D release
