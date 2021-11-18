@@ -101,5 +101,5 @@ jobs:
       run: |
         curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/CN-ip-cidr.txt > /dev/null 2>&1
         curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Country.mmdb > /dev/null 2>&1
-        curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/Surge-Ruleset.list > /dev/null 2>&1
+        curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/chnip.mmdb > /dev/null 2>&1
         curl -L https://purge.jsdelivr.net/gh/mangoclover/GeoIP2-CN@release/chnroutes.mmdb > /dev/null 2>&1
