@@ -58,8 +58,8 @@ jobs:
       run: |
         CURRENT_DIR=$(pwd)
         cd dist
-        ./ipip2mmdb -s ./CN-ip-cidr.txt -d Country.mmdb
-        ./ipip2mmdb -s ./chnroutes.txt -d chnroutes.mmdb
+        # ./ipip2mmdb -s ./CN-ip-cidr.txt -d Country.mmdb
+        # ./ipip2mmdb -s ./chnroutes.txt -d chnroutes.mmdb
         ./ipip2mmdb -s ./chnip.list -d chnip.mmdb
         cd $CURRENT_DIR
 
