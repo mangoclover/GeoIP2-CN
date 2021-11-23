@@ -46,7 +46,7 @@ jobs:
         curl -LR -o- "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/CN.txt" | grep -v "#" > dist/chunzhen.txt
         curl -LR -o- "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt" | grep -v "#" | sed "s/^\(.*\)$/IP-CIDR,\1/g" > dist/Surge-Ruleset.list
         curl -LR -o- "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt" | grep -v "#" > dist/chnroutes.txt
-        curl -LR -o- "https://download-1302801676.cos.ap-shanghai.myqcloud.com/Geo_AS_IP/Geo_AS_IP_CN.txt" |sed -e '1,3d'|sed -e 's/list=CN//g'|sed -e 's/ //g' |sed -e 's/add//g' |sed -e 's/ress//g'|sed -e 's/=//g' > dist/chnip.list
+        curl -LR -o- "https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt" |sed -e '1,3d'|sed -e 's/list=CN//g'|sed -e 's/ //g' |sed -e 's/add//g' |sed -e 's/ress//g'|sed -e 's/=//g' > dist/chnip.list
         
     - name: Merge and IP lists and remove duplicates
       run: |
